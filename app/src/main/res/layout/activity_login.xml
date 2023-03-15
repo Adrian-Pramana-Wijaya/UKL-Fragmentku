@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warnaabu"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:text="Create an account"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="25dp"
+        android:textColor="@color/light_white"
+        android:layout_marginTop="62dp"
+        android:layout_marginLeft="29dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Account today!"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="29dp"
+        android:fontFamily="@font/manropesb"
+        android:textColor="@color/warnatulisanatas"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/birucentang"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="17dp"
+        android:layout_marginLeft="29dp"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="41dp"
+        android:background="@drawable/emailpass"
+        android:layout_marginTop="200dp"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:padding="3dp"
+        android:hint="  Masukkan Username Anda"
+        android:layout_marginLeft="28dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:layout_marginTop="255dp"
+        android:textColor="@color/birucentang"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="17dp"
+        android:layout_marginLeft="29dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="41dp"
+        android:hint="  Masukkan Email Anda"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:padding="3dp"
+        android:background="@drawable/emailpass"
+        android:layout_marginTop="295dp"
+        android:layout_marginLeft="28dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_marginTop="350dp"
+        android:textColor="@color/birucentang"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="17dp"
+        android:layout_marginLeft="29dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="41dp"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:padding="3dp"
+        app:passwordToggleEnabled="true"
+        android:hint="  Masukkan Password Anda"
+        android:background="@drawable/emailpass"
+        android:layout_marginTop="385dp"
+        android:layout_marginLeft="28dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="260dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Remember Me"
+        android:textColor="@color/light_white" />
+
+    <TextView
+        android:layout_width="131dp"
+        android:layout_height="19dp"
+        android:text="@string/forget"
+        android:textColor="@color/merah"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="464dp"/>
+
+    <Button
+        android:id="@+id/buttonback"
+        android:layout_width="300dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="29dp"
+        android:text="Register"
+        app:backgroundTint="@color/warnashape"
+        android:textColor="@color/black"
+        android:background="@drawable/emailpass" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="650dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Made With ❤️ by Adrian Pramana Wijaya"
+        android:textColor="@color/light_white" />
+
+</RelativeLayout>
