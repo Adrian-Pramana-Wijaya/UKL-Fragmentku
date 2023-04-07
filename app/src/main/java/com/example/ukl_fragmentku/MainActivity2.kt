@@ -1,34 +1,37 @@
 package com.example.ukl_fragmentku
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
-import com.google.android.material.tabs.TabLayout.TabLayoutOnPageChangeListener
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+
 class MainActivity2 : AppCompatActivity() {
-    lateinit var tabLayout: TabLayout
-    lateinit var viewPager: ViewPager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        supportActionBar?.hide()
-        tabLayout = findViewById(R.id.tabLayout)
-        viewPager = findViewById(R.id.viewPager)
-        tabLayout.addTab(tabLayout.newTab().setText("FirstFragment"))
-        tabLayout.addTab(tabLayout.newTab().setText("SecondFragment"))
-        tabLayout.addTab(tabLayout.newTab().setText("ThirdFragment"))
-        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-        val adapter = MyAdapter(this, supportFragmentManager,
-            tabLayout.tabCount)
-        viewPager.adapter = adapter
-        viewPager.addOnPageChangeListener(TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                viewPager.currentItem = tab.position
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab) {}
-            override fun onTabReselected(tab: TabLayout.Tab) {}
-        })
+        tampilMyFriendsFragment()
+    }
+
+    private fun gantiFragment(
+        fragmentManager: FragmentManager,
+        fragment: Fragment, frameId: Int
+    ) {
+        val transaction = fragmentManager.beginTransaction()
+        transaction.replace(frameId, fragment)
+        transaction.commit()
+    }
+
+    fun tampilMyFriendsFragment() {
+        gantiFragment(
+            supportFragmentManager,
+            MyFriendsFragment.newInstance(), R.id.contentFrame
+        )
+    }
+
+    fun tampilMyFriendsAddFragment() {
+        gantiFragment(
+            supportFragmentManager,
+            MyFriendsAddFragment.newInstance(), R.id.contentFrame
+        )
     }
 }

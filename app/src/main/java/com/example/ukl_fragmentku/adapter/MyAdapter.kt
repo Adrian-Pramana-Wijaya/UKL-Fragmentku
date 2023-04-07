@@ -1,9 +1,13 @@
-package com.example.ukl_fragmentku
+package com.example.ukl_fragmentku.adapter
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.ukl_fragmentku.FirstFragment
+import com.example.ukl_fragmentku.SecondFragment
+import com.example.ukl_fragmentku.ThirdFragment
+
 @Suppress("DEPRECATION")
 internal class MyAdapter(
     var context: Context,
